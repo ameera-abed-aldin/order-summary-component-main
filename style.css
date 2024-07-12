@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Red Hat Display", sans-serif;
+  height: 100vh;
+  background-image: url(images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--Pale-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 450px;
+  background-color: white;
+  height: auto;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.img-cont img {
+  max-width: 100%;
+  height: auto;
+}
+.text-cont {
+  padding: 40px;
+}
+.text-cont h1,
+.text-cont p {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.text-cont p {
+  padding: 10px;
+}
+.section2 {
+  background-color: var(--Very-pale-blue);
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+.section2-left {
+  display: flex;
+  align-items: center;
+}
+.annual-cont {
+  margin-left: 10px;
+}
+.chang {
+  color: var(--Dark-blue);
+}
+.change:hover {
+  text-decoration: none;
+  color: var(--Bright-blue);
+}
+.process {
+  display: block;
+  background-color: var(--Bright-blue);
+  color: white;
+  padding: 10px;
+  width: 100%;
+  font-family: "Red Hat Display", sans-serif;
+  border-radius: 10px;
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+.process:hover {
+  background-color: hsl(245, 35%, 51%);
+  border: none;
+ 
+}
+.cancel-order {
+  display: block;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  font-size: 15px;
+}
+@media only screen and (max-width: 377px) {
+  body {
+    background-image: url(images/pattern-background-mobile.svg);
+  }
+  .container {
+    width: 330px;
+  }
+  .text-cont {
+    padding: 20px;
+  }
+  .text-cont p {
+    padding: 0;
+  }
+  .cancel-order,
+  .process {
+    font-size: 12px;
+  }
+}
